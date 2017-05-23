@@ -1,0 +1,65 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<link rel="import" href="../app-layout/app-layout.html">
+
+<link rel="import" href="../paper-icon-button/paper-icon-button.html">
+
+<link rel="import" href="bower_components/iron-icons/iron-icons.html">
+
+<dom-module id="test-el">
+    <template>
+    
+        <style>      
+            :host {        
+                display: block;      
+            }
+            paper-icon-button {
+/*                background-color: black;*/
+            }
+    </style>
+<!--    <h2>Hello [[prop1]]!</h2>-->
+<!--
+        <app-header reveals>
+            <app-toolbar>
+                <paper-icon-button icon="menu" onclick="drawer.toggle()"></paper-icon-button>
+-->
+                <h2 main-title>Test Element</h2>
+                <paper-icon-button icon="delete"></paper-icon-button>
+                <paper-icon-button icon="search"></paper-icon-button>
+                <paper-icon-button icon="close"></paper-icon-button>
+                <paper-progress value="10" indeterminate bottom-item></paper-progress>
+<!--
+            </app-toolbar>
+        </app-header>
+-->
+<!--        <app-drawer id="drawer" swipe-open></app-drawer>-->
+        <div size="10">Sample content</div>
+    </template>
+
+    <script>
+        /**
+         * `test-el`
+         * This is a training test to make sure I can use elements I create in applications that I create.
+         *
+         * @customElement
+         * @polymer
+         * @demo demo/index.html
+         */
+        class TestEl extends Polymer.Element {
+            static get is() {
+                return 'test-el';
+            }
+            static get properties() {
+                return {
+                    prop1: {
+                        type: String,
+                        value: 'test-el'
+                    }
+                };
+            }
+        }
+
+        window.customElements.define(TestEl.is, TestEl);
+
+    </script>
+</dom-module>
